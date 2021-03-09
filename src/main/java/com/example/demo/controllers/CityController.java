@@ -19,7 +19,7 @@ public class CityController {
 
     @GetMapping("/cities")
     public List<City> getCities(
-            @RequestParam(value = "ids", required = false) List<Long> idList) {
+            @RequestParam(value = "id", required = false) List<Long> idList) {
         if (idList != null && !idList.isEmpty()) {
             return cityService.getCityByManyId(idList);
         }
